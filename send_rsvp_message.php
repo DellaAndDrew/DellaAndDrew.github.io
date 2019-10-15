@@ -64,14 +64,14 @@ header( "Location: $error_page" );
 If email injection is detected, redirect to the error page.
 If you add a form field, you should add it here.
 */
-elseif ( isInjected($email_address) || isInjected($first_name)  || isInjected($comments) ) {
+elseif ( isInjected($names) || isInjected($attending)  || isInjected($diet) || isInjected($rd)) {
 header( "Location: $error_page" );
 }
 
 // If we passed all previous tests, send the email then redirect to the thank you page.
 else {
 
-        mail( "$webmaster_email", "Feedback Form Results", $msg );
+        mail( "$webmaster_email", "RSVP: $names", $msg );
 
         header( "Location: $thankyou_page" );
 }
