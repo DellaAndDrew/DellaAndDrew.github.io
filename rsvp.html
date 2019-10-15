@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<title>RSVP</title>
+
+<h1>High Tech RSVP Form for Della and Drew's Wedding</h1>
+<form method="post" action="send_mail.php">
+  <p>
+    <label>Names:<br>
+      <input type="text" name="names" required>
+    </label>
+  </p>
+
+  <p>
+    <br>
+    <label>Are you coming?<br>
+      <input type="radio" name="attending" value="yes" required> I'm in!<br>
+      <input type="radio" name="attending" value="no"> I decline with regret<br>
+      <input type="radio" name="attending" value="no"> I decline with pleasure<br>
+    </label>
+  </p>
+
+  <p>
+    <br>
+    <label>What about the rehearsal dinner?<br>
+      <input type="radio" name="rehearsal_dinner" value="yes"> I'll be there!<br>
+      <input type="radio" name="rehearsal_dinner" value="no"> I can't make it<br>
+    </label>
+  </p>
+
+  <p>
+    <br>
+    <label>Do you have any dietary restrictions?<br>
+      <textarea class="form-control" name="dietary_restrictions" rows="4" cols="50"></textarea>
+    </label>
+  </p>
+
+  <p><button>Submit</button></p>
+</form>

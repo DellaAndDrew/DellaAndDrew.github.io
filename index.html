@@ -44,7 +44,7 @@ hvgap {
       <a href="#hotels" class="w3-bar-item w3-button">Hotels and Transit</a>
       <a href="#thingstodo" class="w3-bar-item w3-button">Things To Do</a>
       <a href="#faq" class="w3-bar-item w3-button">FAQ</a>
-      <!-- <a href="#rsvp" class="w3-bar-item w3-button">RSVP</a> -->
+      <a href="#rsvp" class="w3-bar-item w3-button">RSVP</a>
     </div>
   </div>
 </div>
@@ -300,14 +300,51 @@ hvgap {
 
   </div>
 
-  <!-- <\!-- RSVP -\-> -->
-  <!-- <div class="w3-row w3-padding-64" id="rsvp"> -->
-  <!--   <div class="w3-col l6 w3-padding-large"> -->
-  <!--     <h1 >RSVP</h1><br> -->
-  <!--   </div> -->
 
-  <!--   <\!-- Need to figure this out -\-> -->
-  <!-- </div> -->
+
+
+  <!-- RSVP -->
+  <div class="w3-row w3-padding-64" id="rsvp">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 >RSVP</h1><br>
+
+      <p class="w3-large">
+        Use the button below to access our high tech,
+        password-protected RSVP page!
+      </p>
+
+
+      <!-- Password-protected gateway to RSVP page -->
+      <!-- Ripped directly from Wikihow -->
+      <SCRIPT>
+        function passWord() {
+        var testV = 1;
+        var pass1 = prompt('Password:',' ');
+        while (testV < 3) {
+                       if (!pass1)
+                       history.go(-1);
+                       if (pass1.toLowerCase() == "hardtoguesspassword") {
+                       window.open('rsvp.html');
+                       break;
+                       }
+                       testV+=1;
+                       var pass1 =
+                       prompt('Incorrect password--please try again.','Password');
+                       }
+                       if (pass1.toLowerCase()!="password" & testV ==3)
+                       history.go(-1);
+                       return " ";
+                       }
+                       </SCRIPT>
+      <CENTER>
+        <FORM>
+          <input type="button" value="RSVP" onClick="passWord()">
+        </FORM>
+      </CENTER>
+
+    </div>
+
+  </div>
 
 
 <!-- End page content -->
